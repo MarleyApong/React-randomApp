@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100&display=swap');
+
+:root {
+  --bg-color: #ececec;
+  --tx-color: #1a1a1a;
+  --txa-color: #d1920a;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: var(--bg-color);
+  /* padding: 2rem 9%; */
+}
+
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 2rem;
+  width: 100%;
+  padding: 2rem 9%;
+  box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.288);
+}
+
+.Header .Nav {
+  display: flex;
+  gap: 20px;
+  color: var(--tx-color);
+}
+
+.Header .Logo-active {
+  color: var(--txa-color);
+  font-weight: 600;
+}
+
+.Header .Nav .Link{
+  color: var(--tx-color);
+  font-size: 1rem;
+}
+
+.Header .Nav .Link-active {
+  position: relative;
+  color: var(--txa-color);
+  font-weight: 600;
+}
+
+.Header .Nav .Link-active::before,
+.Header .Nav .Link-active::after {
+  position: absolute;
+  content: '';
+  height: 8px;
+  width: 8px;
+  border-radius: 4%;
+  background: var(--txa-color);
+}
+
+.Header .Nav .Link-active::before {
+  top: -6px;
+}
+
+.Header .Nav .Link-active::after {
+  right: 0px;
+  bottom: -5px;
+}
+
+.Home .Main {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: calc(100vh - 4rem);
+  padding: 0 9%;
+}
+
+.Home .Main  .Left,.Home .Main  .Right {
+  width: 50%;
+}
+
+.Right img {
+  animation: cube 2s 2s infinite;
+}
+
+@keyframes cube {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.Home .Main  .Left h1 {
+  color: var(--tx-color);
+}
+
+.Home .Main  .Left h1 span {
+  color: var(--txa-color);
+}
+
+.Home .Main  .Left h4 {
+  margin-bottom: 20px;
+}
+
+.Btn, .Btn2 {
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  margin-top: 20px;
+  color: var(--bg-color);
+  transition: 1s;
+  cursor: pointer;
+}
+
+.Btn {
+  background: var(--tx-color);
+  animation: Btn 2.5s 2s infinite forwards;
+}
+
+.Btn2{
+  background: none;
+  border: 1px solid var(--txa-color);
+  color: var(--txa-color);
+}
+
+.Btn2:hover {
+  color: var(--bg-color);
+}
+
+.Btn2 .Btn-text {
+  color: var(--txa-color);
+}
+
+.Btn2:hover {
+  background: var(--txa-color);
+}
+
+.Btn2:hover .Btn-text {
+  color: var(--bg-color);
+  font-weight: 600;
+}  
+
+.Btn-text {
+  color: var(--bg-color);
+} 
+
+.Btn:hover {
+  background: var(--txa-color);
+}
+
+@keyframes Btn {
+  0% {
+    transform: translateY(10px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
+
+
+/* ================================== */
+.Content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: calc(100vh - 4rem);
+  padding: 0 9%;
+}
+
+.Content .Left, .Content .Right {
+  width: 50%;
+}
+
+.All-btn {
+  display: flex;
+  gap: 20px;
+}
+
+.Content .Left {
+  padding: 0 9%;
+}
+
+.Parent {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 9%;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.288);
+}
+
+.Content .Left .Input-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.Content .Left .Input-box:last-child {
+  flex-direction: row;
+  gap: 20px;
+}
+
+.Input-box input {
+  border: none;
+  outline: none;
+  padding: 10px;
+  border-radius: 4px;
+  background: var(--tx-color);
+  color: var(--bg-color);
+}
+
+.Input-box .Extend {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.Input-box .Extend input {
+  width: 90%;
+}
+
+.Input-box .Extend button {
+  position: relative;
+  font-size: 10px;
+  color: var(--txa-color);
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.Input-box .Extend button::before {
+  content: 'Copié';
+  position: absolute;
+  top: -50px;
+  right: 0;
+  background: var(--txa-color);
+  color: var(--bg-color);
+  padding: 8px 10px;
+  border-radius: 4px;
+  display: none;
+}
+
+.Input-box .Extend button i {
+  font-size: 1.3rem;
+}
+
+.Level {
+  display: flex;
+  gap: 15px;
+}
+
+.Level .a, .Level .b {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+} 
