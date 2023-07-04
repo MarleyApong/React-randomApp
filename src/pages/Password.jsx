@@ -154,7 +154,7 @@ function Password() {
                             <NavLink to="/login" className='Btn-text'>Login</NavLink>
                         </button>
                         <button className='Btn2'>
-                            <NavLink to="/name" className='Btn-text'>Name</NavLink>
+                            <NavLink to="/" className='Btn-text'>Accueil</NavLink>
                         </button>
                     </div>
                 </div>
