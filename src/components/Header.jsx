@@ -17,9 +17,6 @@ function Header() {
                 <NavLink to="/password" className={(Link) => (Link.isActive ? "Link-active" : "Link")}>
                     Password
                 </NavLink>
-                <NavLink to="/name" className={(Link) => (Link.isActive ? "Link-active" : "Link")}>
-                    Name
-                </NavLink>
             </div>
         </header>
     )
